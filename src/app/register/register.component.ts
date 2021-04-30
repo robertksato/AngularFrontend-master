@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   }
 
   OnSubmit(name:string,email:string): void{
-    this.quizService.insertParticipant(name,email).subscribe(
+    this.quizService.addParticipant(name,email).subscribe(
       (data : any) =>{
         localStorage.clear();
         localStorage.setItem('participant',JSON.stringify(data));

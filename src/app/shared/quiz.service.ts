@@ -25,22 +25,22 @@ export class QuizService {
 
   //---------------- Http Methods---------------
 
-  insertParticipant(name: string, email: string) {
+  addParticipant(name: string, email: string) {
     var body = {
-      Name: name,
-      Email: email
+      "name": name,
+      "email": email
     }
-    return this.http.post(this.rootUrl + '/addParticipant', body);
+    return this.http.post(this.rootUrl + '/participant/add', body);
   }
 
   getQuestions() {
     return this.http.get(this.rootUrl + '/Questions');
   }
 
-  /* getAnswers() {
+   getAnswers() {
     var body = this.qns.map(x => x.QnID);
     return this.http.post(this.rootUrl + '/Answers', body);
-  } */
+  }
 
   submitScore() {
     var body = JSON.parse(localStorage.getItem('participant')!);
