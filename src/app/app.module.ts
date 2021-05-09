@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { QuizComponent } from './quiz/quiz.component';
-import { ResultComponent } from './result/result.component';
 import { appRoutes } from './routes';
 import { QuizService } from './shared/quiz.service';
 import { AuthGuard } from './auth/auth.guard';
@@ -21,7 +20,7 @@ import { AuthGuard } from './auth/auth.guard';
     RegisterComponent,
     NavbarComponent,
     QuizComponent,
-    ResultComponent
+
   ],
   imports: [
     BrowserModule,
